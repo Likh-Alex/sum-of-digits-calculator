@@ -14,13 +14,13 @@ public class SumCalculatorCommandHandler implements CommandHandler {
     }
 
     private void promptUser() {
-        System.out.println("Please enter a number up to 10 digits long: ");
+        System.out.println("Please enter an integer up to 10 digits long: ");
     }
 
     public void processInput(String input) {
         boolean isFirstNumeric = input.chars().allMatch(Character::isDigit);
         if (input.length() > 10) {
-            System.out.println("The number is too long, please try again\n");
+            System.out.println("The integer is too long, please try again\n");
             return;
         }
         if (isFirstNumeric) {
